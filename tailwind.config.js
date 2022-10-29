@@ -21,6 +21,7 @@ module.exports = {
       colors: {
         
         'dark-gray' : '#0B0B0C',
+        'light-brown' : '#A3845E',
 
         dim: {
           50: "#5F99F7",

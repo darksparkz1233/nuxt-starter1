@@ -1,7 +1,8 @@
 <template>
   <div :class="{ dark: darkMode }">
     <!-- ? header -->
-    <div>
+    <div class="">
+      <NuxtLoadingIndicator />
       <HeaderComponent @switch-theme="darkMode = !darkMode">
         <!-- ? dark mode icon -->
         <template v-if="!darkMode" v-slot:dark-mode>
@@ -41,15 +42,15 @@
       </HeaderComponent>
     </div>
 
-    <div class="flex flex-col p-5 h-full bg-gray-100 dark:bg-[#0B0B0C]">
+    <div class="flex flex-col gap-10 h-full bg-gray-100 dark:bg-[#0B0B0C]">
       <!-- ? first coffee row: -->
-      <FirstRow />
+      <FirstRow class="mt-10" />
       <!-- ? second coffee row: -->
-      <SecondRow />
+      <SecondRow class="mt-10" />
     </div>
   </div>
 </template>
  
 <script setup>
-const darkMode = ref(false);
+const darkMode = ref(true);
 </script>
